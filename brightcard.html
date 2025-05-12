@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mother's Day Card</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #fcefee, #fff0f9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+    }
+
+    .card {
+      width: 340px;
+      height: 500px;
+      perspective: 1200px;
+    }
+
+    .inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 1s ease-in-out;
+      cursor: pointer;
+      border-radius: 20px;
+      animation: glow 3s ease-in-out infinite alternate;
+    }
+
+    .card:hover .inner {
+      transform: rotateY(180deg);
+    }
+
+    @keyframes glow {
+      from {
+        box-shadow: 0 0 10px #ffb6c1, 0 0 20px #ffd1dc;
+      }
+      to {
+        box-shadow: 0 0 25px #ff69b4, 0 0 40px #ffc1cc;
+      }
+    }
+
+    .side {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 25px;
+      text-align: center;
+    }
+
+    .front {
+      background: #ffe2ec;
+      font-size: 24px;
+      font-weight: bold;
+      color: #d63384;
+      animation: sparkle 2s infinite linear;
+    }
+
+    .back {
+      background: #ffffff;
+      transform: rotateY(180deg);
+      flex-direction: column;
+      color: #023047;
+    }
+
+    .back h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #d63384;
+    }
+
+    .back p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    @keyframes sparkle {
+      0% { text-shadow: 0 0 3px #fff; }
+      50% { text-shadow: 0 0 15px #ff69b4, 0 0 20px #ff69b4; }
+      100% { text-shadow: 0 0 3px #fff; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <div class="inner">
+    <div class="side front">
+      🌸 To My Beautiful Amma 🌸
+    </div>
+    <div class="side back">
+      <div>
+        <h1>Happy Mother’s Day<br>Amma  💖</h1>
+        <p>“I hope today reminds you 
+          just how much you're appreciated—
+          not just today, but every single day.”</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
