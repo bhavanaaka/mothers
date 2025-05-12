@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mother's Day Card</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #d0e8f2, #f3f9fb);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .card {
+      width: 320px;
+      height: 460px;
+      background: #8ecae6;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+
+    .card.open {
+      transform: rotateY(180deg);
+    }
+
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      backface-visibility: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .card-front {
+      background: #577590;
+      color: #fff;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .card-back {
+      background: linear-gradient(135deg, #caf0f8, #ade8f4);
+      color: #023047;
+      transform: rotateY(180deg);
+      flex-direction: column;
+    }
+
+    .card-back h1 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: #ff69b4;
+    }
+
+    .card-back p {
+      font-size: 18px;
+      line-height: 1.5;
+      color: #023047;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card" onclick="this.classList.toggle('open')">
+  <div class="card-front">
+    🌸 Click to Open 🌸
+  </div>
+  <div class="card-back">
+    <h1>Happy Mother’s Day<br>Bindu Pinni 💖</h1>
+    <p>
+      “A mother’s love is like a compass<br>
+      that guides us through life’s journey.”
+    </p>
+  </div>
+</div>
+
+</body>
+</html>
